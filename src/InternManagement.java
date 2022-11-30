@@ -43,7 +43,7 @@ public class InternManagement extends InputField implements Management {
             System.out.println("Add New Intern:");
             String temp = inputString("ID");
             for (int i = 0; i < internList.size(); i++) {
-                if (internList.get(i).getId() == temp) {
+                if (internList.get(i).getId().equals(temp)) {
                     System.out.println("ID already used!");
                     System.out.println("-----------------------------------------------");
                     return;

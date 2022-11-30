@@ -13,8 +13,10 @@ public class App {
             option = option();
             switch (option) {
                 case 1:
+                do {
                     submenu("Employee");
-                    switch (option()) {
+                    option = option();
+                    switch (option) {
                         case 1:
                         empM.view();
                         System.out.println("");
@@ -36,6 +38,8 @@ public class App {
                         empM.delete();
                         System.out.println("");
                             break;
+                        case 0:
+                        
                         default:
                         System.out.println("Please enter the number of the function!");
                         System.out.println("-----------------------------------------------");
@@ -43,10 +47,15 @@ public class App {
                             break;
 
                     }
+                } while (option != 0);
+                    
                     break;
                 case 2:
+                do {
                     submenu("Intern");
-                    switch (option()) {
+
+                    option = option();
+                    switch (option) {
                         case 1:
                         internM.view();
                         System.out.println("");
@@ -75,12 +84,9 @@ public class App {
 
                     }
                     break;
-                default:
-                System.out.println("Please enter the number of the function!");
-                System.out.println("-----------------------------------------------");
-                System.out.println("");
-
-                    break;
+                
+                } while (option != 0);
+                    
 
             }
 
