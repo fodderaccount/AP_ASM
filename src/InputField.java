@@ -9,7 +9,7 @@ public abstract class InputField {
     
     public String inputString(String temp) {
         System.out.print("Enter "+ temp+" :" );
-        return sc.nextLine();
+        return sc.next();
     }
     public double inputDouble(String temp){
         

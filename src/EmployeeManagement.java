@@ -21,17 +21,16 @@ public class EmployeeManagement extends InputField implements Management {
     @Override
     public void search() {
         System.out.println("Enter Employee ID:");
-        String n=sc.nextLine();
+        String n = sc.nextLine();
         // TODO Auto-generated method stub
         for (int i = 0; i < empList.size(); i++) {
             if (empList.get(i).getId().equalsIgnoreCase(n)) {
-               System.out.println(empList.get(i).toString());
+                System.out.println(empList.get(i).toString());
                 return;
-            } 
             }
-        
-        System.out.println("Employee doesn't exist");
+        }
 
+        System.out.println("Employee doesn't exist");
 
     }
 
@@ -41,14 +40,17 @@ public class EmployeeManagement extends InputField implements Management {
         try {
             System.out.println("Add New Employee:");
             String temp = inputString("ID");
+
             for (int i = 0; i < empList.size(); i++) {
-                if (empList.get(i).getId() == temp) {
+                if (empList.get(i).getId().equals(temp)) {
                     System.out.println("ID already used or Employee exist!");
                     System.out.println("-----------------------------------------------");
                     return;
                 }
+
             }
             try {
+
                 Employee emptemp = new Employee();
                 emptemp.setId(temp);
                 emptemp.setName(inputString("Name"));
@@ -57,12 +59,15 @@ public class EmployeeManagement extends InputField implements Management {
                 emptemp.setSalary(inputDouble("Salary"));
                 empList.add(emptemp);
             } catch (NumberFormatException e) {
-                System.out.println("Check your input");
+                System.out.println("please enter correct input!");
             }
+
         } catch (Exception e) {
             System.out.println("Please enter the field!");
         }
     }
+
+    
 
     @Override
     public void edit() {
