@@ -24,15 +24,16 @@ public class InternManagement extends InputField implements Management {
     @Override
     public void search() {
         System.out.println("Enter Intern ID:");
+        String n = sc.nextLine();
+
         // TODO Auto-generated method stub
         for (int i = 0; i < internList.size(); i++) {
-            if (internList.get(i).getId().equalsIgnoreCase(sc.next())) {
-               internList.get(i).toString();
+            if (internList.get(i).getId().equalsIgnoreCase(n)) {
+               System.out.println(internList.get(i).toString());
                 return;
-            } else {
-                System.out.println("Intern doesn't exist");
             }
         }
+        System.out.println("Intern doesn't exist");
 
     }
 
@@ -50,12 +51,14 @@ public class InternManagement extends InputField implements Management {
                 }
             }
             try {
-                Intern interntintern = new Intern();
-                interntintern.setId(temp);
-                interntintern.setName(inputString("Name"));
-                interntintern.setEmail(inputString("Email"));
-                interntintern.setEndOfContract(inputDate("EndDate"));
-                interntintern.setStatus(inputString("Status"));
+                Intern tempintern = new Intern();
+                tempintern.setId(temp);
+                tempintern.setName(inputString("Name"));
+                tempintern.setEmail(inputString("Email"));
+                
+                tempintern.setStatus(inputString("Status"));
+                tempintern.setEndOfContract(inputDate("EndDate"));
+                internList.add(tempintern);
             } catch (NumberFormatException e) {
                 System.out.println("Check your input");
             }
