@@ -13,91 +13,97 @@ public class App {
             option = option();
             switch (option) {
                 case 1:
-                    do {
-                        submenu("Employee");
-                        option = option();
-                        switch (option) {
-                            case 1:
-                                empM.view();
-                                System.out.println("");
+                do {
+                    submenu("Employee");
+                    option = option();
+                    switch (option) {
+                        case 1:
+                        empM.view();
+                        System.out.println("");
 
-                                break;
-                            case 2:
-                                empM.search();
-                                System.out.println("");
-                                break;
-                            case 3:
-                                empM.add();
-                                System.out.println("");
-                                break;
-                            case 4:
-                                empM.edit();
-                                System.out.println("");
-                                break;
-                            case 5:
-                                empM.delete();
-                                System.out.println("");
-                                break;
+                            break;
+                        case 2:
+                        empM.search();
+                        System.out.println("");
+                            break;
+                        case 3:
+                        empM.add();
+                        System.out.println("");
+                            break;
+                        case 4:
+                        empM.edit();
+                        System.out.println("");
+                            break;
+                        case 5:
+                        empM.delete();
+                        System.out.println("");
+                            break;
                             case 6:
                                 continue mainmemu;
-                            default:
+                        default:
                                 if (option != 0) {
-                                    System.out.println("Please enter the number of the function!");
-                                    System.out.println("-----------------------------------------------");
-                                    System.out.println("");
+                        System.out.println("Please enter the number of the function!");
+                        System.out.println("-----------------------------------------------");
+                        System.out.println("");
                                 } else {
                                     System.out.println("End Session");
                                 }
 
-                                break;
+                            break;
 
-                        }
-                    } while (option != 0);
-
+                    }
+                } while (option != 0);
+                    
                     break;
                 case 2:
-                    do {
-                        submenu("Intern");
+                do {
+                    submenu("Intern");
 
-                        option = option();
-                        switch (option) {
-                            case 1:
-                                internM.view();
-                                System.out.println("");
-                                break;
-                            case 2:
-                                internM.search();
-                                System.out.println("");
-                                break;
-                            case 3:
-                                internM.add();
-                                System.out.println("");
-                                break;
-                            case 4:
-                                internM.edit();
-                                System.out.println("");
-                                break;
-                            case 5:
-                                internM.delete();
-                                System.out.println("");
-                                break;
+                    option = option();
+                    switch (option) {
+                        case 1:
+                        internM.view();
+                        System.out.println("");
+                            break;
+                        case 2:
+                        internM.search();
+                        System.out.println("");
+                            break;
+                        case 3:
+                        internM.add();
+                        System.out.println("");
+                            break;
+                        case 4:
+                        internM.edit();
+                        System.out.println("");
+                            break;
+                        case 5:
+                        internM.delete();
+                        System.out.println("");
+                            break;
                             case 6:
                                 continue mainmemu;
-                            default:
+                        default:
                                 if (option != 0) {
-                                    System.out.println("Please enter the number of the function!");
-                                    System.out.println("-----------------------------------------------");
-                                    System.out.println("");
+                        System.out.println("Please enter the number of the function!");
+                System.out.println("-----------------------------------------------");
+                System.out.println("");
                                 } else {
                                     System.out.println("End Session");
                                 }
 
-                                break;
+                            break;
 
-                        }
-                        break;
+                    }
+                    break;
+                
 
-                    } while (option != 0);
+                } while (option != 0);
+                break;
+                default:
+                System.out.println("Please enter the number of the function!");
+                System.out.println("-----------------------------------------------");
+                System.out.println("");
 
             }
 
@@ -131,7 +137,7 @@ public class App {
         int temp = 0;
         do {
             System.out.println("Select option: ");
-
+            
             try {
                 temp = sc.nextInt();
                 check = false;

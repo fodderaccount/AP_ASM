@@ -58,6 +58,7 @@ public class EmployeeManagement extends InputField implements Management {
                 emptemp.setStatus(inputString("Status"));
                 emptemp.setSalary(inputDouble("Salary"));
                 empList.add(emptemp);
+                System.out.println("Employee Added");
             } catch (NumberFormatException e) {
                 System.out.println("please enter correct input!");
             }
